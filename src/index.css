@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+@layer utilities {
+  @keyframes floatUp {
+    0% {
+      transform: translateY(105vh) scale(0.5) rotate(0deg);
+      opacity: 0;
+    }
+    10% {
+      opacity: 0.7;
+    }
+    90% {
+      opacity: 0.7;
+    }
+    100% {
+      transform: translateY(-15vh) scale(1.2) rotate(360deg);
+      opacity: 0;
+    }
+  }
+
+  @keyframes pulseSoft {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.04);
+    }
+  }
+
+  @keyframes shimmer {
+    0% {
+      background-position: -200% 0;
+    }
+    100% {
+      background-position: 200% 0;
+    }
+  }
+}
+
+.animate-float-up {
+  animation: floatUp 12s linear infinite;
+}
+
+.animate-pulse-soft {
+  animation: pulseSoft 2.5s ease-in-out infinite;
+}
+
+/* Custom scrollbar and backdrop enhancements */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Fredoka', 'Outfit', sans-serif;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
