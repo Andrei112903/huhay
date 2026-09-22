@@ -4,8 +4,8 @@ import confetti from 'canvas-confetti';
 import { Heart, Sparkles, Stars, Send } from 'lucide-react';
 
 // Custom Generated Romantic Bear Artworks
-const ASKING_BEAR_IMG = "/cute_bear_asking.png";
-const CELEBRATE_BEAR_IMG = "/cute_bear_celebrating.png";
+const ASKING_BEAR_IMG = `${import.meta.env.BASE_URL}cute_bear_asking.png`;
+const CELEBRATE_BEAR_IMG = `${import.meta.env.BASE_URL}cute_bear_celebrating.png`;
 const ASKING_BEAR_GIF_FALLBACK = "https://media.tenor.com/Z8pS7gS6Jm8AAAAi/cute-bear.gif";
 
 
@@ -64,7 +64,7 @@ export default function App() {
   // Handle YES button click
   const handleAccept = () => {
     setAccepted(true);
-    setBearImgSrc(CELEBRATE_BEAR_GIF);
+    setBearImgSrc(CELEBRATE_BEAR_IMG);
 
     // Initial big burst of confetti
     confetti({
